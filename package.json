@@ -4,7 +4,8 @@
   "description": "A squad of robotic rovers are to be landed by NASA on a plateau on Mars.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "node src/index.js input.txt"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/vineetsgr07/MarsRover/issues"
   },
-  "homepage": "https://github.com/vineetsgr07/MarsRover#readme"
+  "homepage": "https://github.com/vineetsgr07/MarsRover#readme",
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "jest": "^27.3.1",
+    "q": "^1.5.1"
+  }
 }
