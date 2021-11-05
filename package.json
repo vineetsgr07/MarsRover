@@ -1,0 +1,19 @@
+{
+  "name": "mars-rover",
+  "version": "1.0.0",
+  "description": "A squad of robotic rovers are to be landed by NASA on a plateau on Mars.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vineetsgr07/MarsRover.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vineetsgr07/MarsRover/issues"
+  },
+  "homepage": "https://github.com/vineetsgr07/MarsRover#readme"
+}
