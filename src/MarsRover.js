@@ -19,7 +19,7 @@ const Rover = ({
     const getDirection = () => _direction;
     const turnLeft = () => _direction = directions[_direction].left
     const turnRight = () => _direction = directions[_direction].right;
-    const moveForward = () => directions[_direction].move;
+    const moveForward = () => directions[_direction].move.call(this);
     const validateRover = (x, y) => x <= grid.width && y <= grid.height && x >= 0 && y >= 0
 
     const getPosition = () => {
@@ -29,10 +29,10 @@ const Rover = ({
     };
 
     const projectMove = () => {
-        let x = _x;
-        let y = _y;
+        var x = _x;
+        var y = _y;
         directions[_direction].move;
-        let projectedPosition = getPosition();
+        var projectedPosition = getPosition();
         _x = x;
         _y = y;
         return projectedPosition;
@@ -44,7 +44,7 @@ const Rover = ({
         } else if (action === 'R') {
             turnRight();
         } else if (action === 'M') {
-            let projectedMove = projectMove();
+            var projectedMove = projectMove();
             if (validateRover(projectedMove.x, projectedMove.y)) {
                 moveForward();
             } else {
