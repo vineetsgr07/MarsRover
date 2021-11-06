@@ -29,10 +29,10 @@ const Rover = ({
     };
 
     const projectMove = () => {
-        var x = _x;
-        var y = _y;
+        let x = _x;
+        let y = _y;
         directions[_direction].move;
-        var projectedPosition = getPosition();
+        let projectedPosition = getPosition();
         _x = x;
         _y = y;
         return projectedPosition;
@@ -44,7 +44,7 @@ const Rover = ({
         } else if (action === 'R') {
             turnRight();
         } else if (action === 'M') {
-            var projectedMove = projectMove();
+            let projectedMove = projectMove();
             if (validateRover(projectedMove.x, projectedMove.y)) {
                 moveForward();
             } else {

@@ -4,9 +4,9 @@ const fs = require('fs')
 const filename = process.argv[2];
 
 const processInput = (data, callback) => {
-    var lines = data.trim().split('\n').map(item => item.split(":")[1]);
-    var map = lines.shift()
-    var roverSpecifications = [];
+    let lines = data.trim().split('\n').map(item => item.split(":")[1]);
+    let map = lines.shift()
+    let roverSpecifications = [];
 
     while (lines.length > 0) {
         roverSpecifications.push({
