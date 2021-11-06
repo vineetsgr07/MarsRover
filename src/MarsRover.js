@@ -19,8 +19,8 @@ const Rover = ({
     const getDirection = () => _direction;
     const turnLeft = () => _direction = directions[_direction].left
     const turnRight = () => _direction = directions[_direction].right;
-    const moveForward = () => directions[_direction].move.call(this);
-    const validateRover = (x, y) => x >= 0 && y >= 0 && x <= grid.width && y <= grid.height
+    const moveForward = () => directions[_direction].move;
+    const validateRover = (x, y) => x <= grid.width && y <= grid.height && x >= 0 && y >= 0
 
     const getPosition = () => {
         return {
