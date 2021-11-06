@@ -1,4 +1,4 @@
-const { Rover } = require('./marsRover')
+const { Rover } = require('./MarsRover')
 const { readFromText, printToConsole, transformArguments } = require('./utils')
 
 readFromText().then((data) => {

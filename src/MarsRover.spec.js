@@ -1,5 +1,5 @@
 'use strict';
-const { Rover } = require('./marsRover');
+const { Rover } = require('./MarsRover');
 const myMock = jest.fn();
 describe('Test Rover Position', function () {
     it('Should return default configuration for Rover', function () {
