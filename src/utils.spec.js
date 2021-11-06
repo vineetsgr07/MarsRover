@@ -1,7 +1,7 @@
 'use strict';
 const { transformArguments, processInput } = require('./utils');
 describe('Test utility functions', function () {
-    it('Should return default configuration for Rover', function () {
+    it('Should test transformArguments', function () {
         const input = transformArguments({
             grid: '5 5',
             instructions: 'LMLMLMLMM',
@@ -9,15 +9,15 @@ describe('Test utility functions', function () {
         })
 
         const expected = {
-            grid: [5, 5],
+            grid: { width: 5, height: 5 },
             instruction: ['L', 'M', 'L', 'M', 'L', 'M', 'L', 'M', 'M'],
-            position: [1, 2, 'N']
+            position: { x: 1, y: 2, direction: 'N' }
         }
 
         expect(input).toEqual(expected);
     });
 
-    it('Should Transform Test input, processInput()', function () {
+    it('Should transform test input)', function () {
         const input = 'Plateau:5 5\nRover1 Landing:1 2 N\nRover1 Instructions:LMLMLMLMM';
         const expected = [{
             grid: '5 5',

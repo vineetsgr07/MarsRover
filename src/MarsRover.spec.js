@@ -13,7 +13,7 @@ describe('Test Rover Position', function () {
         expect(Rover(input).getDirection()).toEqual('N');
     });
 
-    it('turn rover to West', function () {
+    it('Turn rover to West', function () {
         const input = {
             direction: 'N',
             grid: { width: 5, height: 5 },
@@ -27,7 +27,7 @@ describe('Test Rover Position', function () {
         expect(updatedRoverPosition).toEqual('W');
     });
 
-    it('turn rover to East, and move one step to East', function () {
+    it('Turn rover to East, and move one step to East', function () {
         const input = {
             direction: 'N',
             grid: { width: 5, height: 5 },
@@ -40,7 +40,7 @@ describe('Test Rover Position', function () {
         expect(updatedRoverPosition).toEqual('E');
     });
 
-    it('turn rover to East', function () {
+    it('Turn rover to East', function () {
         const input = {
             direction: 'N',
             grid: { width: 5, height: 5 },
@@ -53,7 +53,7 @@ describe('Test Rover Position', function () {
         expect(updatedRoverPosition).toEqual('E');
     });
 
-    it('turn rover to East, and move one step', function () {
+    it('Turn rover to East, and move one step', function () {
         const input = {
             direction: 'N',
             grid: { width: 5, height: 5 },
@@ -74,7 +74,7 @@ describe('Test Rover Position', function () {
         });
     });
 
-    it('turn rover to East, and move Three step', function () {
+    it('Turn rover to East, and move Three step', function () {
         const input = {
             direction: 'N',
             grid: { width: 5, height: 5 },

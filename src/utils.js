@@ -37,14 +37,24 @@ const readFromText = () => {
  * @returns {grid, position, instruction}
  */
 const transformArguments = (data) => {
+    let grid = data.grid
+        .split(" ")
+        .map((item) => parseInt(item))
+    let position = data.position
+        .split(" ")
+        .map((item, index) => [0, 1]
+            .includes(index) ? parseInt(item) : item)
+
     return {
-        grid: data.grid
-            .split(" ")
-            .map((item) => parseInt(item)),
-        position: data.position
-            .split(" ")
-            .map((item, index) => [0, 1]
-                .includes(index) ? parseInt(item) : item),
+        grid: {
+            width: grid[0],
+            height: grid[1]
+        },
+        position: {
+            x: position[0],
+            y: position[1],
+            direction: position[2]
+        },
         instruction: data.instructions.split("")
     }
 }

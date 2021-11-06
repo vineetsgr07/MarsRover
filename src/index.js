@@ -8,12 +8,12 @@ readFromText().then((data) => {
         const { grid, position, instruction } = transformArguments(data[i])
 
         const rover = Rover({
-            x: position[0],
-            y: position[1],
-            direction: position[2],
+            x: position.x,
+            y: position.y,
+            direction: position.direction,
             grid: {
-                width: grid[0],
-                height: grid[1]
+                width: grid.width,
+                height: grid.height
             }
         })
 
