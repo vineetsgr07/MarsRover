@@ -18,5 +18,7 @@
   },
   "homepage": "https://github.com/vineetsgr07/MarsRover#readme",
   "devDependencies": {
-    "jest": "^27.3.1"  }
+    "jest": "^27.3.1",
+    "q": "^1.5.1"
+  }
 }
